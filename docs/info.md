@@ -16,6 +16,10 @@ Placeholder Tiny Tapeout top for the Frome Road / omnichip CMOS5L entry.
 oracle. This will be replaced by a hardwired UART TX, then a reprogrammable
 bit-bang core (see the repo README and GitHub issues).
 
+Pin names in `info.yaml` already match the planned layout: mode-0 SPI host on
+`ui[0:2]` / `uo[0]`, protocol GPIO on `uio[7:0]`. The placeholder does not
+implement that interface yet.
+
 ## How to test
 
 ```bash
