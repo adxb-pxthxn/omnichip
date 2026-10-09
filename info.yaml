@@ -1,0 +1,55 @@
+# Tiny Tapeout project information — Jane Street CMOS5L / ihp-sg13cmos5l
+project:
+  title:        "omnichip"
+  author:       "Frome Road"
+  discord:      ""
+  description:  "One chip, many protocols. Reprogrammable bit-bang protocol emulator."
+  language:     "Verilog"
+  clock_hz:     50000000
+
+  # Contest target: 6x4 (~24k cells). 8x4 is a later option if organisers open it.
+  tiles: "6x4"
+
+  # Top module must start with tt_um_
+  top_module:  "tt_um_omnichip"
+
+  # List each source file under src/ separately.
+  # Also update PROJECT_SOURCES in test/Makefile when this list changes.
+  source_files:
+    - "project.v"
+
+# Pinout for the datasheet. Leave unused pins blank. Do not add or remove pins.
+# Planned host SPI + protocol pins (placeholder RTL does not drive these yet).
+pinout:
+  # Inputs — host SPI
+  ui[0]: "SPI_SCK"
+  ui[1]: "SPI_CS_N"
+  ui[2]: "SPI_MOSI"
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "SPI_MISO"
+  uo[1]: ""
+  uo[2]: ""
+  uo[3]: ""
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional — protocol pins
+  uio[0]: "GPIO0"
+  uio[1]: "GPIO1"
+  uio[2]: "GPIO2"
+  uio[3]: "GPIO3"
+  uio[4]: "GPIO4"
+  uio[5]: "GPIO5"
+  uio[6]: "GPIO6"
+  uio[7]: "GPIO7"
+
+# Do not change!
+yaml_version: 6

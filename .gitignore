@@ -2,9 +2,16 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .venv/
+venv/
+
+# Tiny Tapeout support tools clone (local harden)
+/tt/
 
 test/sim_build/
 test/results.xml
+test/tb.fst
+test/tb.vcd
+test/output/
 *.fst
 *.vcd
 
@@ -16,4 +23,7 @@ build/
 *.odb
 *.sdf
 
+# Editor / OS
 .DS_Store
+.idea/
+*.swp
